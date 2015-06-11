@@ -1,0 +1,57 @@
+# -*- mode: ruby -*-
+# vi: set ft=ruby :
+ 
+# Vagrantfile API/syntax version. Don't touch unless you know what you're doing!
+VAGRANTFILE_API_VERSION = "2"
+ 
+Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
+ 
+  config.vm.provider :virtualbox do |vb|
+    vb.gui = true
+  end
+ 
+  config.vm.define :xp_ie6 do |host|
+    host.vm.box = 'xp-ie6'
+    host.vm.box_url = 'http://aka.ms/vagrant-xp-ie6'
+  end
+ 
+  config.vm.define :xp_ie8 do |host|
+    host.vm.box = 'xp-ie8'
+    host.vm.box_url = 'http://aka.ms/vagrant-xp-ie8'
+  end
+ 
+  config.vm.define :vista_ie7 do |host|
+    host.vm.box = 'vista-ie7'
+    host.vm.box_url = 'http://aka.ms/vagrant-vista-ie7'
+  end
+ 
+  config.vm.define :win7_ie8 do |host|
+    host.vm.box = 'win7-ie8'
+    host.vm.box_url = 'http://aka.ms/vagrant-win7-ie8'
+  end
+ 
+  config.vm.define :win7_ie9 do |host|
+    host.vm.box = 'win7-ie9'
+    host.vm.box_url = 'http://aka.ms/vagrant-win7-ie9'
+  end
+ 
+  config.vm.define :win7_ie10 do |host|
+    host.vm.box = 'win7-ie10'
+    host.vm.box_url = 'http://aka.ms/vagrant-win7-ie10'
+  end
+ 
+  config.vm.define :win7_ie11 do |host|
+    host.vm.box = 'win7-ie11'
+    host.vm.box_url = 'http://aka.ms/vagrant-win7-ie11'
+  end
+ 
+  config.vm.define :win8_ie10 do |host|
+    host.vm.box = 'win8-ie10'
+    host.vm.box_url = 'http://aka.ms/vagrant-win8-ie10'
+  end
+ 
+  config.vm.define :win81_ie11 do |host|
+    host.vm.box = 'win81-ie11'
+    host.vm.box_url = 'http://aka.ms/vagrant-win81-ie11'
+  end
+end
